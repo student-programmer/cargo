@@ -1,0 +1,81 @@
+:root{
+  /* Base — navy (structure, panels, night sky) */
+  --navy-950:#04121F;
+  --navy-900:#061C36;
+  --navy-800:#0B273F;
+  --navy-700:#12354F;
+  --navy-600:#1B4568;
+  --navy-500:#2C5C85;
+  --navy-400:#4A7CA6;
+
+  /* Base — solar (energy, accent) */
+  --solar-700:#C98700;
+  --solar-600:#E8A200;
+  --solar-500:#FEB813;
+  --solar-400:#FFC93F;
+  --solar-300:#FFDD84;
+  --solar-100:#FFF1CE;
+  --solar-50:#FFFAEE;
+
+  /* Base — neutral */
+  --n-0:#FFFFFF;
+  --n-25:#F9FBFD;
+  --n-50:#F3F6FA;
+  --n-100:#EBEFF5;
+  --n-200:#D7DEE8;
+  --n-300:#B9C4D2;
+  --n-400:#9BA8B9;
+  --n-500:#76859A;
+  --n-600:#5B6B80;
+  --n-700:#3F4E61;
+
+  /* Semantic status */
+  --ok-500:#1BA97A;
+  --ok-100:#E1F5EE;
+  --warn-500:#F08A24;
+  --warn-100:#FDEEDF;
+  --err-500:#E24B4B;
+  --err-100:#FBE6E6;
+  --info-500:#2C7BE5;
+  --info-100:#E4EEFC;
+
+  /* Semantic aliases — text */
+  --text-strong:var(--navy-900);
+  --text-body:var(--navy-800);
+  --text-muted:var(--n-600);
+  --text-faint:var(--n-400);
+  --text-inverse:var(--n-0);
+  --text-accent:var(--solar-700);
+  --text-link:var(--navy-700);
+  --text-link-hover:var(--solar-700);
+
+  /* Semantic aliases — surfaces */
+  --surface-page:var(--n-0);
+  --surface-subtle:var(--n-50);
+  --surface-card:var(--n-0);
+  --surface-card-alt:var(--n-25);
+  --surface-inverse:var(--navy-900);
+  --surface-inverse-alt:var(--navy-800);
+  --surface-accent:var(--solar-500);
+  --surface-accent-soft:var(--solar-100);
+
+  /* Semantic aliases — lines */
+  --border-subtle:var(--n-100);
+  --border-default:var(--n-200);
+  --border-strong:var(--n-300);
+  --border-inverse:rgba(255,255,255,.14);
+  --border-accent:var(--solar-500);
+
+  /* The graphic line (Sun -> Panels -> Inverter -> Battery -> House) */
+  --flow-line:var(--solar-500);
+  --flow-line-dim:rgba(254,184,19,.28);
+  --flow-node:var(--navy-800);
+  --flow-node-active:var(--solar-500);
+  --flow-line-width:2px; /* @kind other */
+
+  /* Gradients */
+  --grad-panel:linear-gradient(135deg,#17395C 0%,#0B273F 60%,#061C36 100%); /* @kind color */
+  --grad-sun:linear-gradient(135deg,#FFDD84 0%,#FEB813 55%,#E8A200 100%); /* @kind color */
+  --grad-night:linear-gradient(180deg,#0B273F 0%,#04121F 100%); /* @kind color */
+  --grad-protect:linear-gradient(180deg,rgba(6,28,54,0) 0%,rgba(6,28,54,.78) 100%); /* @kind color */
+}

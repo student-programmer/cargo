@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/design-system-dd9b5fb6-0466-4e3b-a76d-f6c720a53d61/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/design-system-dd9b5fb6-0466-4e3b-a76d-f6c720a53d61/tokens/colors.css">
+<link rel="stylesheet" href="_ds/design-system-dd9b5fb6-0466-4e3b-a76d-f6c720a53d61/tokens/typography.css">
+<link rel="stylesheet" href="_ds/design-system-dd9b5fb6-0466-4e3b-a76d-f6c720a53d61/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/design-system-dd9b5fb6-0466-4e3b-a76d-f6c720a53d61/tokens/radius.css">
+<link rel="stylesheet" href="_ds/design-system-dd9b5fb6-0466-4e3b-a76d-f6c720a53d61/tokens/shadows.css">
+<link rel="stylesheet" href="_ds/design-system-dd9b5fb6-0466-4e3b-a76d-f6c720a53d61/tokens/motion.css">
+<link rel="stylesheet" href="_ds/design-system-dd9b5fb6-0466-4e3b-a76d-f6c720a53d61/tokens/base.css">
+<link rel="stylesheet" href="_ds/design-system-dd9b5fb6-0466-4e3b-a76d-f6c720a53d61/styles.css">
+<script src="_ds/design-system-dd9b5fb6-0466-4e3b-a76d-f6c720a53d61/_ds_bundle.js"></script>
+<style>html{scroll-behavior:smooth}body{margin:0;background:var(--surface-page)}a,a:hover{color:inherit;text-decoration:none;border-bottom:none !important}a:hover{color:var(--solar-500)}</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:30;background:var(--glass-dark);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border-inverse);color:var(--n-0)">
+  <div style="max-width:var(--page-max);margin:0 auto;padding:0 var(--page-pad);height:76px;display:flex;align-items:center;justify-content:space-between;gap:var(--sp-6)">
+    <a href="#top" style="display:flex;align-items:center;gap:var(--sp-3);color:var(--n-0)">
+      <span style="width:40px;height:40px;border-radius:var(--r-md);background:var(--solar-500);color:var(--navy-900);display:flex;align-items:center;justify-content:center"><x-import component-from-global-scope="DesignSystem_dd9b5f.Icon" name="truck" size="{{ 22 }}" hint-size="22px,22px"></x-import></span>
+      <span style="display:flex;flex-direction:column;line-height:1.1"><b style="font-family:var(--font-display);font-weight:900;font-size:20px;letter-spacing:-0.02em">{{ brand }}</b><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6)">Грузоперевозки по Крыму</span></span>
+    </a>
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex;gap:var(--sp-8);font-size:var(--fs-body-sm);font-weight:600">
+        <a href="#fleet" style="color:rgba(255,255,255,.8)">Транспорт</a>
+        <a href="#routes" style="color:rgba(255,255,255,.8)">Цены по маршрутам</a>
+        <a href="#steps" style="color:rgba(255,255,255,.8)">Как работаем</a>
+        <a href="#request" style="color:rgba(255,255,255,.8)">Контакты</a>
+      </nav>
+    </sc-if>
+    <a href="{{ tel }}" style="display:flex;align-items:center;gap:var(--sp-3);color:var(--n-0)">
+      <span style="color:var(--solar-400);display:flex"><x-import component-from-global-scope="DesignSystem_dd9b5f.Icon" name="phone" size="{{ 20 }}" hint-size="20px,20px"></x-import></span>
+      <span style="display:flex;flex-direction:column;line-height:1.2"><b style="font-family:var(--font-mono);font-size:16px;white-space:nowrap">{{ phone }}</b><span style="font-size:11px;color:rgba(255,255,255,.6)">Ежедневно, 7:00–23:00</span></span>
+    </a>
+  </div>
+</header>
+
+<section id="top" style="background:var(--grad-night);color:var(--n-0);padding:var(--sp-16) 0 var(--sp-12)">
+  <div style="max-width:var(--page-max);margin:0 auto;padding:0 var(--page-pad);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:var(--sp-12);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:var(--sp-6)">
+      <span class="eu-eyebrow" style="color:var(--solar-400)">Грузоперевозки по всему Крыму</span>
+      <h1 style="font-size:var(--fs-display-xl);color:var(--n-0);margin:0;text-wrap:balance">Перевезём груз по Крыму за один день</h1>
+      <p style="font-size:var(--fs-body-lg);color:rgba(255,255,255,.72);max-width:520px;line-height:var(--lh-loose);margin:0;text-wrap:pretty">Газели, 5-тонники и фуры с грузчиками. Подаём машину от 40 минут в Симферополе, Севастополе и Ялте.</p>
+      <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap">
+        <x-import component-from-global-scope="DesignSystem_dd9b5f.Button" size="lg" icon="phone" variant="inverse" on-click="{{ call }}" hint-size="260px,56px">{{ phone }}</x-import>
+        <a href="#routes" style="display:flex;align-items:center;gap:var(--sp-2);padding:0 var(--sp-4);height:56px;color:var(--n-0);font-weight:600;border:1px solid rgba(255,255,255,.35);border-radius:var(--r-md)">Цены по маршрутам<x-import component-from-global-scope="DesignSystem_dd9b5f.Icon" name="arrow-right" size="{{ 20 }}" hint-size="20px,20px"></x-import></a>
+      </div>
+      <div style="display:flex;gap:var(--sp-8);flex-wrap:wrap;margin-top:var(--sp-2)">
+        <span style="display:flex;flex-direction:column"><b style="font-family:var(--font-display);font-size:var(--fs-h3);color:var(--solar-400)">от 1 200 ₽</b><span style="font-size:var(--fs-caption);color:rgba(255,255,255,.6)">за час, Газель</span></span>
+        <span style="display:flex;flex-direction:column"><b style="font-family:var(--font-display);font-size:var(--fs-h3);color:var(--n-0)">40 мин</b><span style="font-size:var(--fs-caption);color:rgba(255,255,255,.6)">подача по городу</span></span>
+        <span style="display:flex;flex-direction:column"><b style="font-family:var(--font-display);font-size:var(--fs-h3);color:var(--n-0)">7:00–23:00</b><span style="font-size:var(--fs-caption);color:rgba(255,255,255,.6)">без выходных</span></span>
+      </div>
+    </div>
+
+    <sc-if value="{{ showHeroForm }}" hint-placeholder-val="{{ true }}">
+      <div style="background:var(--surface-card);color:var(--text-strong);border-radius:var(--r-card);box-shadow:var(--sh-4);padding:var(--card-pad-lg);position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-sun)"></div>
+        <sc-if value="{{ hero.sent }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:var(--sp-4);align-items:flex-start;padding:var(--sp-6) 0">
+            <span style="color:var(--ok-500);display:flex"><x-import component-from-global-scope="DesignSystem_dd9b5f.Icon" name="circle-check" size="{{ 40 }}" hint-size="40px,40px"></x-import></span>
+            <h3 style="font-size:var(--fs-h2);margin:0">Заявка принята</h3>
+            <p style="margin:0;color:var(--text-muted)">{{ hero.name }}, перезвоним на {{ hero.phone }} в течение 5 минут и назовём цену.</p>
+            <x-import component-from-global-scope="DesignSystem_dd9b5f.Button" variant="outline" on-click="{{ hero.reset }}" hint-size="200px,44px">Отправить ещё одну</x-import>
+          </div>
+        </sc-if>
+        <sc-if value="{{ hero.notSent }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:var(--sp-5)">
+            <div style="display:flex;flex-direction:column;gap:var(--sp-2)">
+              <h3 style="font-size:var(--fs-h2);margin:0">Рассчитаем стоимость за 5 минут</h3>
+              <p style="margin:0;color:var(--text-muted);font-size:var(--fs-body-sm)">Оставьте номер — перезвоним, уточним груз и назовём точную цену.</p>
+            </div>
+            <x-import component-from-global-scope="DesignSystem_dd9b5f.Input" id="hero-name" label="Ваше имя" icon="user" placeholder="Иван" value="{{ hero.nameVal }}" on-change="{{ hero.onName }}" error="{{ hero.nameErr }}" hint-size="100%,72px"></x-import>
+            <x-import component-from-global-scope="DesignSystem_dd9b5f.Input" id="hero-phone" type="tel" label="Телефон" icon="phone" placeholder="+7 (978) 000-00-00" value="{{ hero.phoneVal }}" on-change="{{ hero.onPhone }}" error="{{ hero.phoneErr }}" hint-size="100%,72px"></x-import>
+            <x-import component-from-global-scope="DesignSystem_dd9b5f.Checkbox" label="Согласен с обработкой персональных данных" checked="{{ hero.ok }}" on-change="{{ hero.onOk }}" hint-size="100%,24px"></x-import>
+            <x-import component-from-global-scope="DesignSystem_dd9b5f.Button" size="lg" full-width="{{ true }}" icon-right="arrow-right" disabled="{{ hero.blocked }}" on-click="{{ hero.submit }}" hint-size="100%,56px">Оставить заявку</x-import>
+            <p style="margin:0;font-size:var(--fs-caption);color:var(--text-muted);text-align:center">или позвоните: <a href="{{ tel }}" style="font-family:var(--font-mono);font-weight:600;color:var(--text-strong)">{{ phone }}</a></p>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+  </div>
+
+  <div style="max-width:var(--page-max);margin:var(--sp-12) auto 0;padding:var(--sp-8) var(--page-pad) 0;border-top:1px solid var(--border-inverse)">
+    <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:relative">
+      <div style="position:absolute;left:10%;right:10%;top:23px;height:2px;background:rgba(255,255,255,.22)"></div>
+      <sc-for list="{{ cities }}" as="c" hint-placeholder-count="5">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:var(--sp-3);position:relative;text-align:center">
+          <span style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:{{ c.bg }};color:{{ c.fg }};border:2px solid {{ c.ring }}"><x-import component-from-global-scope="DesignSystem_dd9b5f.Icon" name="{{ c.icon }}" size="{{ 20 }}" hint-size="20px,20px"></x-import></span>
+          <span style="font-family:var(--font-display);font-weight:700;font-size:var(--fs-body-sm)">{{ c.name }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="fleet" style="padding:var(--section-y) 0;background:var(--surface-page)">
+  <div style="max-width:var(--page-max);margin:0 auto;padding:0 var(--page-pad)">
+    <span class="eu-eyebrow">Транспорт</span>
+    <h2 style="margin:var(--sp-3) 0 var(--sp-3);max-width:620px">Машина под любой объём</h2>
+    <p style="margin:0 0 var(--sp-10);color:var(--text-muted);max-width:560px">Цена за час с водителем, минимальный заказ — 2 часа. Грузчики — от 500 ₽/час за человека.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:var(--gutter)">
+      <sc-for list="{{ fleet }}" as="v" hint-placeholder-count="4">
+        <x-import component-from-global-scope="DesignSystem_dd9b5f.Card" hoverable="{{ true }}" top-line="{{ v.hit }}" pad="lg" hint-size="100%,340px">
+          <div style="display:flex;flex-direction:column;gap:var(--sp-4);height:100%">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <span style="width:48px;height:48px;border-radius:var(--r-md);background:var(--surface-subtle);color:var(--navy-800);display:flex;align-items:center;justify-content:center"><x-import component-from-global-scope="DesignSystem_dd9b5f.Icon" name="{{ v.icon }}" size="{{ 24 }}" hint-size="24px,24px"></x-import></span>
+              <sc-if value="{{ v.hit }}" hint-placeholder-val="{{ false }}"><x-import component-from-global-scope="DesignSystem_dd9b5f.Badge" tone="solar" hint-size="60px,24px">Хит</x-import></sc-if>
+            </div>
+            <h3 style="font-size:var(--fs-h3);margin:0">{{ v.name }}</h3>
+            <div style="display:flex;flex-direction:column;gap:var(--sp-2);font-size:var(--fs-body-sm);color:var(--text-muted)">
+              <span style="display:flex;justify-content:space-between"><span>Грузоподъёмность</span><b style="font-family:var(--font-mono);color:var(--text-strong)">{{ v.kg }}</b></span>
+              <span style="display:flex;justify-content:space-between"><span>Объём кузова</span><b style="font-family:var(--font-mono);color:var(--text-strong)">{{ v.m3 }}</b></span>
+              <span style="display:flex;justify-content:space-between"><span>Длина кузова</span><b style="font-family:var(--font-mono);color:var(--text-strong)">{{ v.len }}</b></span>
+            </div>
+            <div style="margin-top:auto;padding-top:var(--sp-4);border-top:1px solid var(--border-subtle);display:flex;flex-direction:column;gap:var(--sp-4)">
+              <b style="font-family:var(--font-display);font-weight:900;font-size:var(--fs-h3);color:var(--text-strong);white-space:nowrap">{{ v.price }}</b>
+              <x-import component-from-global-scope="DesignSystem_dd9b5f.Button" variant="outline" full-width="{{ true }}" icon-right="arrow-right" on-click="{{ toRequest }}" hint-size="100%,44px">Заказать</x-import>
+            </div>
+          </div>
+        </x-import>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="steps" style="padding:var(--section-y) 0;background:var(--surface-subtle)">
+  <div style="max-width:var(--page-max);margin:0 auto;padding:0 var(--page-pad)">
+    <span class="eu-eyebrow">Как работаем</span>
+    <h2 style="margin:var(--sp-3) 0 var(--sp-10);max-width:560px">От звонка до выгрузки — четыре шага</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:var(--gutter)">
+      <x-import component-from-global-scope="DesignSystem_dd9b5f.FeatureTile" icon="phone" title="Звонок или заявка" step="{{ 1 }}" hint-size="100%,180px">Уточняем груз, адреса и время. Называем цену сразу.</x-import>
+      <x-import component-from-global-scope="DesignSystem_dd9b5f.FeatureTile" icon="truck" title="Подача машины" step="{{ 2 }}" hint-size="100%,180px">Приезжаем к назначенному часу, по городу — от 40 минут.</x-import>
+      <x-import component-from-global-scope="DesignSystem_dd9b5f.FeatureTile" icon="package" title="Погрузка" step="{{ 3 }}" hint-size="100%,180px">Грузчики упаковывают и крепят груз ремнями.</x-import>
+      <x-import component-from-global-scope="DesignSystem_dd9b5f.FeatureTile" icon="map-pin" title="Доставка и оплата" step="{{ 4 }}" hint-size="100%,180px">Выгружаем по адресу. Оплата после доставки — наличными или картой.</x-import>
+    </div>
+    <div style="margin-top:var(--sp-12);display:flex;align-items:center;justify-content:space-between;gap:var(--sp-6);flex-wrap:wrap;padding:var(--sp-6) var(--sp-8);background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--r-card);box-shadow:var(--sh-1)">
+      <div style="display:flex;flex-direction:column;gap:var(--sp-1)">
+        <b style="font-family:var(--font-display);font-size:var(--fs-h4)">Нужна машина сегодня?</b>
+        <span style="color:var(--text-muted);font-size:var(--fs-body-sm)">Позвоните — диспетчер ответит за 30 секунд.</span>
+      </div>
+      <a href="{{ tel }}" style="display:flex;align-items:center;gap:var(--sp-3);font-family:var(--font-mono);font-weight:700;font-size:var(--fs-h3);color:var(--text-strong)"><span style="color:var(--solar-500);display:flex"><x-import component-from-global-scope="DesignSystem_dd9b5f.Icon" name="phone" size="{{ 24 }}" hint-size="24px,24px"></x-import></span>{{ phone }}</a>
+    </div>
+  </div>
+</section>
+
+<section id="routes" style="padding:var(--section-y) 0;background:var(--surface-inverse);color:var(--n-0)">
+  <div style="max-width:var(--page-max);margin:0 auto;padding:0 var(--page-pad)">
+    <span class="eu-eyebrow" style="color:var(--solar-400)">Цены по маршрутам</span>
+    <h2 style="color:var(--n-0);margin:var(--sp-3) 0 var(--sp-3)">Междугородние перевозки по Крыму</h2>
+    <p style="margin:0 0 var(--sp-10);color:rgba(255,255,255,.7);max-width:560px">Цена за Газель 1,5 т в одну сторону. Точную стоимость назовём по телефону.</p>
+    <div style="display:flex;flex-direction:column">
+      <sc-for list="{{ routes }}" as="r" hint-placeholder-count="6">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:var(--sp-3) var(--sp-6);align-items:center;padding:var(--sp-5) 0;border-top:1px solid var(--border-inverse)">
+          <span style="font-family:var(--font-display);font-weight:700;font-size:var(--fs-h4)">{{ r.from }} → {{ r.to }}</span>
+          <span style="font-family:var(--font-mono);color:rgba(255,255,255,.7);font-size:var(--fs-body-sm)">{{ r.km }} · {{ r.time }}</span>
+          <span style="font-family:var(--font-mono);font-weight:700;color:var(--solar-400);font-size:var(--fs-body-lg);justify-self:end">{{ r.price }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:var(--sp-10);padding-top:var(--sp-8);border-top:1px solid var(--border-inverse);display:flex;align-items:center;justify-content:space-between;gap:var(--sp-6);flex-wrap:wrap">
+      <span style="color:rgba(255,255,255,.8)">Вашего маршрута нет в списке? Рассчитаем по телефону.</span>
+      <x-import component-from-global-scope="DesignSystem_dd9b5f.Button" size="lg" icon="phone" on-click="{{ call }}" hint-size="260px,56px">{{ phone }}</x-import>
+    </div>
+  </div>
+</section>
+
+<section id="request" style="padding:var(--section-y) 0;background:var(--surface-page)">
+  <div style="max-width:var(--page-max);margin:0 auto;padding:0 var(--page-pad);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:var(--sp-12);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:var(--sp-6)">
+      <span class="eu-eyebrow">Заявка</span>
+      <h2 style="margin:0">Перезвоним за 5 минут</h2>
+      <p style="margin:0;color:var(--text-muted);line-height:var(--lh-loose);max-width:460px">Оставьте имя и телефон. Диспетчер уточнит детали и назовёт цену до начала работ — она не изменится.</p>
+      <div style="display:flex;flex-direction:column;gap:var(--sp-4)">
+        <a href="{{ tel }}" style="display:flex;align-items:center;gap:var(--sp-4)">
+          <span style="width:48px;height:48px;border-radius:var(--r-md);background:var(--navy-900);color:var(--solar-400);display:flex;align-items:center;justify-content:center"><x-import component-from-global-scope="DesignSystem_dd9b5f.Icon" name="phone" size="{{ 24 }}" hint-size="24px,24px"></x-import></span>
+          <span style="display:flex;flex-direction:column"><b style="font-family:var(--font-mono);font-size:var(--fs-h3);color:var(--text-strong)">{{ phone }}</b><span style="font-size:var(--fs-caption);color:var(--text-muted)">Звонок, WhatsApp, Telegram</span></span>
+        </a>
+        <span style="display:flex;align-items:center;gap:var(--sp-4)">
+          <span style="width:48px;height:48px;border-radius:var(--r-md);background:var(--surface-subtle);color:var(--navy-800);display:flex;align-items:center;justify-content:center"><x-import component-from-global-scope="DesignSystem_dd9b5f.Icon" name="clock" size="{{ 24 }}" hint-size="24px,24px"></x-import></span>
+          <span style="display:flex;flex-direction:column"><b style="color:var(--text-strong)">Ежедневно, 7:00–23:00</b><span style="font-size:var(--fs-caption);color:var(--text-muted)">Заявки с сайта — круглосуточно</span></span>
+        </span>
+      </div>
+    </div>
+
+    <x-import component-from-global-scope="DesignSystem_dd9b5f.Card" pad="lg" elevation="{{ 3 }}" top-line="{{ true }}" hint-size="100%,420px">
+      <sc-if value="{{ final.sent }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:var(--sp-4);align-items:flex-start;padding:var(--sp-6) 0">
+          <span style="color:var(--ok-500);display:flex"><x-import component-from-global-scope="DesignSystem_dd9b5f.Icon" name="circle-check" size="{{ 40 }}" hint-size="40px,40px"></x-import></span>
+          <h3 style="font-size:var(--fs-h2);margin:0">Заявка принята</h3>
+          <p style="margin:0;color:var(--text-muted)">{{ final.name }}, перезвоним на {{ final.phone }} в течение 5 минут.</p>
+          <x-import component-from-global-scope="DesignSystem_dd9b5f.Button" variant="outline" on-click="{{ final.reset }}" hint-size="200px,44px">Отправить ещё одну</x-import>
+        </div>
+      </sc-if>
+      <sc-if value="{{ final.notSent }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-direction:column;gap:var(--sp-5)">
+          <h3 style="font-size:var(--fs-h3);margin:0">Заявка на перевозку</h3>
+          <x-import component-from-global-scope="DesignSystem_dd9b5f.Input" id="final-name" label="Ваше имя" icon="user" placeholder="Иван" value="{{ final.nameVal }}" on-change="{{ final.onName }}" error="{{ final.nameErr }}" hint-size="100%,72px"></x-import>
+          <x-import component-from-global-scope="DesignSystem_dd9b5f.Input" id="final-phone" type="tel" label="Телефон" icon="phone" placeholder="+7 (978) 000-00-00" value="{{ final.phoneVal }}" on-change="{{ final.onPhone }}" error="{{ final.phoneErr }}" hint-size="100%,72px"></x-import>
+          <x-import component-from-global-scope="DesignSystem_dd9b5f.Checkbox" label="Согласен с обработкой персональных данных" checked="{{ final.ok }}" on-change="{{ final.onOk }}" hint-size="100%,24px"></x-import>
+          <x-import component-from-global-scope="DesignSystem_dd9b5f.Button" size="lg" full-width="{{ true }}" icon-right="arrow-right" disabled="{{ final.blocked }}" on-click="{{ final.submit }}" hint-size="100%,56px">Оставить заявку</x-import>
+        </div>
+      </sc-if>
+    </x-import>
+  </div>
+</section>
+
+<footer style="background:var(--grad-night);color:var(--n-0);padding:var(--sp-12) 0">
+  <div style="max-width:var(--page-max);margin:0 auto;padding:0 var(--page-pad);display:flex;justify-content:space-between;align-items:flex-start;gap:var(--sp-8);flex-wrap:wrap">
+    <div style="display:flex;flex-direction:column;gap:var(--sp-2)">
+      <b style="font-family:var(--font-display);font-weight:900;font-size:22px;letter-spacing:-0.02em">{{ brand }}</b>
+      <span style="font-size:var(--fs-body-sm);color:rgba(255,255,255,.6)">Грузоперевозки по Республике Крым и Севастополю</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:var(--sp-2);font-size:var(--fs-body-sm);color:rgba(255,255,255,.7)">
+      <span>Симферополь, ул. Киевская, 1</span>
+      <span>Ежедневно, 7:00–23:00</span>
+    </div>
+    <a href="{{ tel }}" style="display:flex;flex-direction:column;gap:var(--sp-1);align-items:flex-end">
+      <b style="font-family:var(--font-mono);font-size:var(--fs-h3);color:var(--solar-400)">{{ phone }}</b>
+      <span style="font-size:var(--fs-caption);color:rgba(255,255,255,.6)">Звонок по Крыму бесплатный</span>
+    </a>
+  </div>
+  <div style="max-width:var(--page-max);margin:var(--sp-8) auto 0;padding:var(--sp-6) var(--page-pad) 0;border-top:1px solid var(--border-inverse);font-size:var(--fs-caption);color:rgba(255,255,255,.5)">© 2026 {{ brand }}. Цены на сайте не являются публичной офертой.</div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;phone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;+7 (978) 000-00-00&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контакты&quot;},&quot;brand&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;КрымГруз&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Контакты&quot;},&quot;showHeroForm&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Макет&quot;}}">
+class Component extends DCLogic {
+  blank = () => ({ name: '', phone: '', ok: true, tried: false, sent: false });
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1280, hero: this.blank(), final: this.blank() };
+  componentDidMount() { this.onR = () => this.setState({ w: window.innerWidth }); window.addEventListener('resize', this.onR); }
+  componentWillUnmount() { window.removeEventListener('resize', this.onR); }
+  fmt(v) {
+    let d = v.replace(/\D/g, '');
+    if (!d) return '';
+    if (d[0] === '8') d = '7' + d.slice(1);
+    if (d[0] !== '7') d = '7' + d;
+    d = d.slice(0, 11);
+    let s = '+7';
+    if (d.length > 1) s += ' (' + d.slice(1, 4);
+    if (d.length >= 4) s += ')';
+    if (d.length > 4) s += ' ' + d.slice(4, 7);
+    if (d.length > 7) s += '-' + d.slice(7, 9);
+    if (d.length > 9) s += '-' + d.slice(9, 11);
+    return s;
+  }
+  form(key) {
+    const f = this.state[key];
+    const set = (p) => this.setState(s => ({ [key]: { ...s[key], ...p } }));
+    const nameBad = f.name.trim().length < 2;
+    const phoneBad = f.phone.replace(/\D/g, '').length < 11;
+    return {
+      sent: f.sent, notSent: !f.sent, name: f.name.trim(), phone: f.phone,
+      nameVal: f.name, phoneVal: f.phone, ok: f.ok, blocked: !f.ok,
+      nameErr: f.tried && nameBad ? 'Укажите имя' : undefined,
+      phoneErr: f.tried && phoneBad ? 'Укажите номер полностью' : undefined,
+      onName: (e) => set({ name: e.target.value }),
+      onPhone: (e) => set({ phone: this.fmt(e.target.value) }),
+      onOk: (v) => set({ ok: typeof v === 'object' && v ? !!v.target.checked : !!v }),
+      submit: () => (nameBad || phoneBad) ? set({ tried: true }) : set({ sent: true }),
+      reset: () => this.setState({ [key]: this.blank() }),
+    };
+  }
+  jump(id) { const el = document.getElementById(id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 76, behavior: 'smooth' }); }
+  renderVals() {
+    const phone = this.props.phone ?? '+7 (978) 000-00-00';
+    const names = ['Керчь', 'Феодосия', 'Симферополь', 'Ялта', 'Севастополь'];
+    return {
+      phone, brand: this.props.brand ?? 'КрымГруз',
+      tel: 'tel:+' + phone.replace(/\D/g, ''),
+      showHeroForm: this.props.showHeroForm ?? true,
+      wide: this.state.w > 980,
+      call: () => { window.location.href = 'tel:+' + phone.replace(/\D/g, ''); },
+      toRoutes: () => this.jump('routes'),
+      toRequest: () => this.jump('request'),
+      hero: this.form('hero'), final: this.form('final'),
+      cities: names.map((n, i) => {
+        const hub = i === 2;
+        return { name: n, icon: hub ? 'warehouse' : 'map-pin', bg: hub ? 'var(--solar-500)' : 'var(--navy-900)', fg: hub ? 'var(--navy-900)' : 'var(--n-0)', ring: hub ? 'var(--solar-500)' : 'rgba(255,255,255,.35)' };
+      }),
+      fleet: [
+        { name: 'Газель 1,5 т', icon: 'truck', kg: '1 500 кг', m3: '9 м³', len: '3 м', price: 'от 1 200 ₽/ч', hit: false },
+        { name: 'Газель Next 2 т', icon: 'truck', kg: '2 000 кг', m3: '16 м³', len: '4,2 м', price: 'от 1 500 ₽/ч', hit: true },
+        { name: 'Грузовик 5 т', icon: 'truck', kg: '5 000 кг', m3: '36 м³', len: '6 м', price: 'от 2 200 ₽/ч', hit: false },
+        { name: 'Фура 20 т', icon: 'container', kg: '20 000 кг', m3: '82 м³', len: '13,6 м', price: 'от 60 ₽/км', hit: false },
+      ],
+      routes: [
+        { from: 'Симферополь', to: 'Севастополь', km: '80 км', time: '1,5 ч', price: 'от 4 500 ₽' },
+        { from: 'Симферополь', to: 'Ялта', km: '85 км', time: '1,5 ч', price: 'от 4 800 ₽' },
+        { from: 'Симферополь', to: 'Евпатория', km: '70 км', time: '1 ч', price: 'от 4 000 ₽' },
+        { from: 'Симферополь', to: 'Феодосия', km: '115 км', time: '2 ч', price: 'от 6 200 ₽' },
+        { from: 'Симферополь', to: 'Керчь', km: '210 км', time: '3 ч', price: 'от 9 500 ₽' },
+        { from: 'Севастополь', to: 'Судак', km: '160 км', time: '2,5 ч', price: 'от 7 800 ₽' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+---
+import '../styles/tokens.css';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'КрымГруз — грузоперевозки по Крыму',
+  description = 'Грузоперевозки по Крыму. Грузовики на 10, 15 и 20 тонн и длинномеры. Подача машины от 40 минут в Симферополе, Севастополе и Ялте.',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

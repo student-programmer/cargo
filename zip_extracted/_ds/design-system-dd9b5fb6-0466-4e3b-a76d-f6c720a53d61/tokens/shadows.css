@@ -1,0 +1,14 @@
+:root{
+  --sh-none:none; /* @kind shadow */
+  --sh-1:0 1px 2px rgba(6,28,54,.06);
+  --sh-2:0 2px 8px rgba(6,28,54,.08);
+  --sh-3:0 8px 24px rgba(6,28,54,.10);
+  --sh-4:0 18px 48px rgba(6,28,54,.14);
+  --sh-solar:0 8px 20px rgba(232,162,0,.28);
+  --sh-inset-top:inset 0 1px 0 rgba(255,255,255,.06);
+  --ring-focus:0 0 0 3px rgba(254,184,19,.45); /* @kind shadow */
+  --ring-focus-inverse:0 0 0 3px rgba(254,184,19,.55); /* @kind shadow */
+  --blur-glass:blur(12px); /* @kind other */
+  --glass-light:rgba(255,255,255,.72); /* @kind other */
+  --glass-dark:rgba(6,28,54,.62); /* @kind other */
+}
