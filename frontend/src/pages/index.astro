@@ -13,10 +13,10 @@ const showRequestForm = false;
 const orderHref = showRequestForm ? '#zayavka' : phoneHref;
 
 const fleet = [
-  { name: 'Грузовик 10 т', price: '7 000 ₽', hourly: '4 000 ₽' },
-  { name: 'Грузовик 15 т', price: '10 000 ₽', hourly: '4 500 ₽' },
-  { name: 'Грузовик 20 т', price: '15 000 ₽', hourly: '5 000 ₽' },
-  { name: 'Длинномер', price: '15 000 ₽', hourly: '4 000 ₽' },
+  { name: 'Грузовик 10 т', price: '9 100 ₽', hourly: '5 200 ₽' },
+  { name: 'Грузовик 15 т', price: '13 000 ₽', hourly: '5 850 ₽' },
+  { name: 'Грузовик 20 т', price: '19 500 ₽', hourly: '6 500 ₽' },
+  { name: 'Длинномер', price: '19 500 ₽', hourly: '5 200 ₽' },
 ];
 
 const routes = [
@@ -78,7 +78,7 @@ const cities = [
           </p>
           <div class="hero-stats">
             <div class="stat-item">
-              <b class="stat-value" style="color:var(--solar-400)">от 4 000 ₽</b>
+              <b class="stat-value" style="color:var(--solar-400)">от 5 200 ₽</b>
               <span class="stat-label">за час по городу</span>
             </div>
             <div class="stat-item">
@@ -146,7 +146,7 @@ const cities = [
               </div>
               <div>
                 <div class="hero-card-title">Грузчики</div>
-                <div class="hero-card-sub">от 500 ₽/ч за чел.</div>
+                <div class="hero-card-sub">от 650 ₽/ч за чел.</div>
               </div>
             </div>
           </div>
@@ -172,12 +172,12 @@ const cities = [
               <h3 class="fleet-name">{v.name}</h3>
               <div class="fleet-specs">
                 <div class="fleet-spec">
-                  <span>Стоимость</span>
+                  <span>Подача</span>
                   <b class="spec-val">{v.price}</b>
                 </div>
                 <div class="fleet-spec">
                   <span>За 1 час</span>
-                  <b class="spec-val">{v.hourly}</b>
+                  <b class="spec-val">от {v.hourly}</b>
                 </div>
               </div>
               <div class="fleet-footer">
